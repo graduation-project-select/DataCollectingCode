@@ -1,9 +1,10 @@
+import os
 import urllib.request
 from bs4 import BeautifulSoup
 import time
 
 # codi 크롤링
-for i in range(16, 100):
+for i in range(8, 100):
     print('page : ' + str(i))
     url = 'https://ko.codibook.net/codi?page='+str(i)
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -34,5 +35,7 @@ for i in range(16, 100):
             item = item_label.find('img', 'item')
             # print(item)
             img_src = item['src']
-            urllib.request.urlretrieve(img_src, codi + '_' + str(count) + '.png')
+            if not (os.path.isdir('codi/' + codi)):
+                os.mkdir('codi/' + codi)
+            urllib.request.urlretrieve(img_src, 'codi/' + codi + '/' + str(count) + '.png')
             time.sleep(5)

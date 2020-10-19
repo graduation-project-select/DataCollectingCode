@@ -7,10 +7,10 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import os
 
-root_dir = 'chiffon /'
+root_dir = 'corduroy/'
 
 # search = input('검색어:')
-keywords = ['chiffon dress', 'chiffon blouse', 'chiffon blouse short', 'chiffon blouse sleeveless', 'chiffon skirt']
+keywords = ['corduroy trousers', '코듀로이 자켓', '코듀로이 셔츠', '코듀로이 팬츠','골덴바지', '골덴 옷']
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
