@@ -4,6 +4,7 @@
 # clothes crawling
 인터넷 쇼핑몰<br>
 구글<br>
+네이버
 
 # codi crawling
 코디북 코디
